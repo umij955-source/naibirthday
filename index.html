@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Naila</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#fffafc;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    max-width:700px;
+    padding:40px;
+    animation:fadeIn 1.5s ease;
+}
+
+.small{
+    letter-spacing:8px;
+    color:#c58a99;
+    text-transform:uppercase;
+    font-size:13px;
+}
+
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:90px;
+    color:#d67a92;
+    font-weight:600;
+}
+
+.name{
+    font-size:28px;
+    color:#444;
+    margin-top:-10px;
+    margin-bottom:40px;
+}
+
+.line{
+    width:80px;
+    height:1px;
+    background:#d8b2bc;
+    margin:25px auto;
+}
+
+.message{
+    color:#555;
+    line-height:2;
+    font-size:17px;
+}
+
+button{
+    margin-top:35px;
+    border:none;
+    background:#d67a92;
+    color:white;
+    padding:14px 28px;
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(255,255,255,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.popup-content{
+    max-width:650px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,.08);
+    text-align:left;
+}
+
+.popup-content h2{
+    margin-bottom:20px;
+    color:#d67a92;
+}
+
+.popup-content p{
+    line-height:2;
+    color:#555;
+}
+
+.close{
+    margin-top:20px;
+}
+
+.flower{
+    position:absolute;
+    font-size:20px;
+    opacity:.15;
+}
+
+.f1{top:10%;left:10%;}
+.f2{top:20%;right:15%;}
+.f3{bottom:15%;left:15%;}
+.f4{bottom:10%;right:10%;}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="flower f1">✿</div>
+<div class="flower f2">✿</div>
+<div class="flower f3">✿</div>
+<div class="flower f4">✿</div>
+
+<div class="container">
+
+    <div class="small">Happy Birthday</div>
+
+    <h1>Naila</h1>
+
+    <div class="name">22 June ✿</div>
+
+    <div class="line"></div>
+
+    <div class="message">
+        Hari ini dunia bertambah satu tahun bersama
+        seseorang yang luar biasa.
+
+        <br><br>
+
+        Semoga semua hal baik menemukanmu,
+        semoga yang kamu perjuangkan berjalan lancar,
+        dan semoga kamu selalu memiliki alasan
+        untuk tersenyum setiap hari.
+    </div>
+
+    <button onclick="openLetter()">
+        Buka Surat ✨
+    </button>
+
+</div>
+
+<div class="popup" id="letter">
+
+    <div class="popup-content">
+
+        <h2>Untuk Naila,</h2>
+
+        <p>
+            Selamat ulang tahun.
+
+            <br><br>
+
+            Aku hanya ingin mengucapkan terima kasih
+            karena sudah menjadi pribadi yang baik,
+            kuat, dan menyenangkan.
+
+            <br><br>
+
+            Semoga di usia yang baru ini,
+            kamu diberikan kesehatan,
+            kebahagiaan, dan banyak kesempatan
+            untuk mewujudkan hal-hal yang kamu impikan.
+
+            <br><br>
+
+            Jangan terlalu keras pada dirimu sendiri.
+            Kamu sudah melakukan yang terbaik sejauh ini.
+
+            <br><br>
+
+            Semoga tahun ini menjadi salah satu
+            tahun terbaik dalam hidupmu.
+
+            <br><br>
+
+            Happy Birthday, Naila 🌷
+        </p>
+
+        <button class="close" onclick="closeLetter()">
+            Tutup
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("letter").style.display="flex";
+}
+
+function closeLetter(){
+    document.getElementById("letter").style.display="none";
+}
+</script>
+
+</body>
+</html>
